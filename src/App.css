@@ -1,0 +1,321 @@
+.home {
+    padding: 2rem 1rem;
+    max-width: 100vw;
+    position: relative;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    right: -110px;
+    top: -100px;
+    width: 50%;
+    height: 90vh;
+    background-color: #F4F4F4;
+    z-index: -3;
+    border-radius: 13px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .home::after {
+        right: -90px;
+        top: -100px;
+        width: 70%;
+        height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .home::after {
+        right: -30px;
+        top: -80px;
+        width: 70%;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .home::after {
+        right: -30px;
+        top: -90px;
+        width: 100%;
+        height: 80vh;
+    }
+}
+
+.mainContentInHome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    grid-template-areas: "description iphone";
+}
+
+@media (max-width: 1020px) {
+    .mainContentInHome {
+        grid-template-columns: 1fr;
+        grid-template-rows: 550px 2fr;
+        grid-template-areas: "iphone" "description";
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 850px) {
+    .mainContentInHome {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 2fr;
+        grid-template-areas: "iphone" "description";
+    }
+}
+
+@media (max-width: 600px) {
+    .mainContentInHome {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 2fr;
+        grid-template-areas: "iphone" "description";
+    }
+}
+
+@media (max-width:550px) {
+    .iphone {
+        overflow: hidden;
+    }
+}
+
+.description {
+    grid-area: description;
+    display: flex;
+    justify-content: top;
+    align-items: start;
+    flex-direction: column;
+}
+
+.iphone {
+    grid-area: iphone;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    position: relative;
+}
+
+.iphoneImg {
+    min-width: 700px;
+    height: max-content;
+    transform: translate(0, -130px);
+    animation: bounse 2s infinite linear;
+    transition: all 0.3s;
+    z-index: -2;
+}
+
+.vector1,
+.vector2 {
+    position: absolute;
+    animation: bounseSmallVery 2s infinite linear;
+    width: 40px;
+}
+
+.vector1 {
+    top: 10%;
+    left: 30%;
+}
+
+.vector2 {
+    top: 5%;
+    left: 40%;
+}
+
+@media (max-width:550px) {
+    .vector1 {
+        top: 34%;
+        left: 0%;
+    }
+
+    .vector2 {
+        top: 34%;
+        left: 48%;
+    }
+}
+
+
+
+@media (max-width: 1270px) {
+    .iphoneImg {
+        min-width: 600px;
+    }
+
+    .btn .name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1120px) {
+    .iphoneImg {
+        min-width: 500px;
+        animation: bounseSmall 2s infinite linear;
+    }
+}
+
+@media (max-width: 1065px) {
+    .iphoneImg {
+        min-width: 450px;
+    }
+}
+
+@media (max-width:500px) {
+    .iphoneImg {
+        transform: translate(-200px, 0);
+    }
+
+    .home {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width:350px) {
+    .iphoneImg {
+        transform: translate(-250px, 0);
+    }
+}
+
+@keyframes bounse {
+    0% {
+        transform: translateY(-130px);
+    }
+
+    50% {
+        transform: translateY(-160px);
+    }
+
+    100% {
+        transform: translateY(-130px);
+    }
+}
+
+@keyframes bounseSmall {
+    0% {
+        transform: translateY(-80px);
+    }
+
+    50% {
+        transform: translateY(-110px);
+    }
+
+    100% {
+        transform: translateY(-80px);
+    }
+}
+
+@keyframes bounseSmallVery {
+    0% {
+        transform: translateY(-90px);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(-90px);
+    }
+}
+
+.firstLine {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: start;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .firstLine {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .firstLine {
+        font-size: 2rem;
+    }
+}
+
+.brandInFirstLine {
+    position: absolute;
+    bottom: -40px;
+    left: -55px;
+}
+
+.secondLine {
+    font-size: 1.125rem;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: start;
+}
+
+.btn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "logo download download download" "logo name name name";
+    padding: 1rem;
+    border-radius: 13px;
+    margin: 0.5rem;
+    gap: 0.25rem;
+    min-width: 210px;
+}
+
+.btn .logoBtn {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn .download {
+    grid-area: download;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn .name {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.32px;
+    font-size: 1.125rem;
+}
+
+.btn:nth-child(1) {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn:nth-child(2) {
+    background-color: #EAEAEA;
+    color: #000;
+}
+
+@media (max-width: 850px) {
+    .thirdLine {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .thirdLine button {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width:550px) {
+
+
+    .secondLine {
+        font-size: 1rem;
+    }
+}
