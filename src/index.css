@@ -51,14 +51,16 @@
 
 @font-face {
   font-family: "gotham";
-  src: url("../src/Gotham\ -\ Font/GothamMedium.ttf");
+  src: url("src/Gotham\ -\ Font/GothamMedium.ttf") format("truetype");
+  ;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "gotham-light";
-  src: url("../src/Gotham\ -\ Font/GothamLight.ttf");
+  src: url("src/Gotham\ -\ Font/GothamLight.ttf") format("truetype");
+  ;
   font-weight: normal;
   font-style: normal;
 }
