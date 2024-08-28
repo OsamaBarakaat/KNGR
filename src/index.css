@@ -51,26 +51,26 @@
 
 @font-face {
   font-family: "gotham";
-  src: url("src/Gotham\ -\ Font/GothamMedium.ttf") format("truetype");
-  ;
+  src: url("src/Gotham\ -\ Font/GothamMedium.ttf") format("truetype"),
+    url("src/Gotham\ -\ Font/GothamMedium_1.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "gotham-light";
-  src: url("src/Gotham\ -\ Font/GothamLight.ttf") format("truetype");
-  ;
+  src: url("src/Gotham\ -\ Font/GothamLight.ttf") format("truetype"),
+    url("src/Gotham\ -\ Font/Gotham-Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: "gotham";
+  font-family: "gotham", sans-serif;
 }
 
 header {
-  font-family: "gotham-light";
+  font-family: "gotham-light", sans-serif;
   position: sticky;
   top: 0;
   background-color: white;
